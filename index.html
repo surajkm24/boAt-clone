@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="topseller.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             padding: 0px;
@@ -211,15 +213,11 @@
             cursor: pointer;
         }
 
-        #topDeals {
+        #userMenu {
+            height: 100px;
+            width: 100px;
             background-color: black;
-            margin-top: -4px;
-        }
-        #userMenu{
-            height:100px;
-            width:100px;
-            background-color:black;
-            color:white;
+            color: white;
         }
     </style>
 </head>
@@ -252,19 +250,19 @@
                     <input type="search" id="search" placeholder="Search..." />
                 </div>
                 <div id="user" style="display:inline-block; position:relative;">
-                   <a><svg focusable="false" width="18" height="17" class="icon icon--header-customer   "
-                        viewBox="0 0 18 17">
-                        <circle style="color:white;" cx="9" cy="5" r="4" fill="none" stroke="currentColor"
-                            stroke-width="3" stroke-linejoin="round"></circle>
-                        <path style="color:white;" d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none"
-                            stroke="currentColor" stroke-width="3"></path>
-                    </svg></a> 
-                    <div id="userMenu" style="display:none;position:absolute;">
+                    <a><svg focusable="false" width="18" height="17" class="icon icon--header-customer   "
+                            viewBox="0 0 18 17">
+                            <circle style="color:white;" cx="9" cy="5" r="4" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linejoin="round"></circle>
+                            <path style="color:white;" d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none"
+                                stroke="currentColor" stroke-width="3"></path>
+                        </svg></a>
+                    <!-- <div id="userMenu" style="display:none;position:absolute;">
                         <p>Hi</p>
                         <a>Manage Your Order</a>
                         <a>Account</a>
                         <button>Logout</button>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -321,9 +319,121 @@
             <span class="dot" onclick="thisImage(4)"></span>
         </div>
     </div>
-    <!-- <div id="topDeals">
-        <h1 style="color:white; text-align:center;">Top Sellers</h1>
-    </div> -->
+    <div id="topSeller">
+        <h1 style="text-align:center;">Top Sellers</h1>
+
+        <div>
+            <p id="smart">Smart Watches</p>
+        </div>
+
+        <div id="smartWatches">
+            <div class="card1">
+                <div>
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008" />
+                </div>
+                <div>
+                    <div class="star">
+                        <span style="color:#ed1c24;" class="fa fa-star checked"></span>
+                        <p class="ratingNumber">4.68 (34)</p>
+                    </div>
+                    <h3>boAt Xtend Watch</h3>
+                    <div>
+                        <p>₹ 2,499</p>
+                        <p>₹ 7,990</p>
+                    </div>
+                    <ul>
+                        <li>Colour variants for every style
+                        </li>
+                        <li> Fast Charge in just 15 minutes
+                        </li>
+                        <li>Ace your workouts with IPX5 rating</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card1">
+                <div>
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_400x.png?v=1625046216" />
+                </div>
+                <div>
+                    <div class="star">
+                        <span style="color:#ed1c24;" class="fa fa-star checked"></span>
+
+                        <p class="ratingNumber">4.79 (757)</p>
+                    </div>
+                    <h3>boAt Storm</h3>
+                    <div>
+                        <p>₹ 2,499</p>
+                        <p>₹ 5,990</p>
+                    </div>
+                    <ul>
+                        <li>Track and transform your health
+
+                        </li>
+                        <li>Full touch display
+
+                        </li>
+                        <li>Track your SpO2 levels</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card1">
+                <div>
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-blue_d6503e2e-e0b1-4c4e-af28-2164903baf9f_400x.png?v=1640237576" />
+                </div>
+                <div>
+                    <div class="star">
+                        <span style="color:white" class="fa fa-star checked"></span>
+
+                        <p style="color:white"" class=" ratingNumber">4.68(34)</p>
+                    </div>
+                    <h3>boAt Watch Iris</h3>
+                    <div>
+                        <p>₹ 4,399</p>
+                        <p>₹ 11,999</p>
+                    </div>
+                    <ul>
+                        <li>Amoled display
+
+                        </li>
+                        <li>
+                            1.39 inches display</li>
+
+                        <li> Health on the go
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card1">
+                <div>
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_400x.png?v=1650387008" />
+                </div>
+                <div>
+                    <div class="star">
+                        <span style="color:#ed1c24;" class="fa fa-star checked"></span>
+
+                        <p class="ratingNumber">5 (2)</p>
+                    </div>
+                    <h3>boAt Watch Vertex</h3>
+                    <div>
+                        <p>₹ 2,399</p>
+                        <p>₹ 6,990</p>
+                    </div>
+                    <ul>
+                        <li>Colour variants for every style
+                        </li>
+                        <li> Fast Charge in just 15 minutes
+                        </li>
+                        <li>Ace your workouts with IPX5 rating</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -363,9 +473,9 @@
         images[imgNumber - 1].style.display = "block";
         dots[imgNumber - 1].className += " modDot";
     }
-    document.querySelector("#user").addEventListener("click",function(){
-        var menu = document.querySelector("#userMenu");
-        menu.style.display="block";
-    })
+    // document.querySelector("#user").addEventListener("click",function(){
+    //     var menu = document.querySelector("#userMenu");
+    //     menu.style.display="block";
+    // })
 
 </script>
