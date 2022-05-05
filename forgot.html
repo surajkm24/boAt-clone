@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        .pageheads>p{
+           font-size: 15px;
+        }
+
+        .pageheads{
+            text-align: center;
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        form {
+             width: 400px;
+             margin: 3% auto;
+              padding: 3%;
+             background: white;
+             margin-top:-1px;
+             background-color: #252525;
+        }
+        body{
+           background-color: #252525;
+       }
+       .spanforgot{
+            color:gray;
+         margin-left:17%;
+        }
+        a:hover{
+            color:white;
+       }
+       a{
+           color:gray
+       }
+       #submit{
+           font-size: 13px;
+           font-family: 'Montserrat', sans-serif;
+
+       }
+   input{
+           display: block;
+           margin: 15px auto;
+           font-size: 22px;
+           padding: 3%;
+           width: 90%;
+           background-color: #252525;
+           border: 1px solid gray;
+           border-radius: 5px; 
+   } 
+   #submit{
+           width:99%;
+           background-color: black;
+           color:white;
+           border:0px;
+           border-radius: 5px;
+       }
+    </style>
+</head>
+<body>
+    <div class="pageheads">
+        <h1>Recover password</h1>
+        <p>Please enter your e-mail:</p>
+    </div>
+    <div>
+        <form id="form">
+            <input type="text" placeholder="E-mail" id="email">
+            <input type="submit" value="RECOVER" id="submit">
+            <span class="spanforgot">
+                Remember your password?
+             <a href="login.html">Back to login</a>
+         </span>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+
+    var form=document.querySelector("#submit")
+    var userData=JSON.parse(localStorage.getItem("login"))
+    console.log(userData)
+    
+    // var data=document.querySelector("#email").value
+    // console.log(data)
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+
+
+
+        var data={
+            email:form.email.value
+        }
+        console.log(data)
+        if(userData==null)
+        {
+            alert("Create an account")
+        }
+       else if(userData.email==data.email)
+        {
+            alert("MActh")
+            
+        }
+        else{
+            alert("No account found with that email")
+        }
+
+    })
+</script>

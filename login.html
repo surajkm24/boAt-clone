@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        form {
+             width: 400px;
+             margin: 3% auto;
+              padding: 3%;
+             background: white;
+             margin-top:-1px;
+             background-color: #252525;
+             
+   }
+        input{
+           display: block;
+           margin: 15px auto;
+           font-size: 22px;
+           padding: 3%;
+           width: 90%;
+           background-color: #252525;
+           border: 1px solid gray;
+           border-radius: 5px;
+         
+             
+        }
+        .pagehead{
+            text-align: center;
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+        }
+       #submit{
+           width:99%;
+           background-color: red;
+           color:white;
+           border:0px;
+           border-radius: 5px;
+       }
+       .fb{
+           font-size: 35px;
+           color:blue;
+          
+       }
+       .fontsize{
+
+           margin-left:45%;
+           margin-top:50px;
+          
+       }
+       .goggle{
+        font-size: 35px;
+        color:red
+         
+       }
+       body{
+           background-color: #252525;
+       }
+        .spanclass{
+            color:gray;
+         margin-left:24%;
+        }
+        a:hover{
+            color:white;
+       }
+       a{
+           color:gray
+       }
+       .pagehead>p{
+           font-size: 15px;
+          
+       }
+       #input{
+           border:1px solid gray;
+           border-radius: 5px;
+           width: fit-content;
+          color:white;
+           padding:5px;
+           display: flex;
+       }
+       #input>input{
+           border-radius: 5px;
+           height: 1px;
+           border:none;
+           
+       }
+       #input>input>span{
+           font-size: 8px !important;
+          margin: 12px;
+          
+       }
+    </style>
+</head>
+<body>
+    <div class="pagehead">
+        <h1>Login</h1>
+        <p>Please enter your e-mail and password:</p>
+    </div>
+      <div class="fontsize">
+                    
+        
+        <a href="https://www.androidenterprise.dev/s/self-registration"> <i class="fa-brands fa-google goggle"></i></a>
+        <a href="https://m.facebook.com/login/save-device/?login_source=login"><i class="fa-brands fa-facebook fb"></i></a>
+    </div>
+    <div class="formpage">
+        <form id="form">
+            <input type="text" placeholder="E-mail" id="email">
+
+
+            <div id="input">
+                <input type="password" placeholder="Enter Password" id="password"/>
+                <span><a href="forgot.html">Forgot Password?</a></span>
+
+            </div>
+           
+
+            <input type="submit" value="LOGIN" id="submit">
+            <span class="spanclass">
+                   New customer?
+                <a href="signup.html">Create an account</a>
+            </span>
+           
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var form=document.querySelector("form");
+    var userDatas=JSON.parse(localStorage.getItem("userData"));
+    console.log(userDatas)
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+
+        var data={
+            email:form.email.value,
+            password:form.password.value
+        }
+        if(userDatas===null)
+        {
+            alert("Please Create an account");
+            // window.location.href="Signup.html"
+        }
+        else if(userDatas.email==data.email && userDatas.password==data.password)
+        {
+         alert("Login Successfully");
+         localStorage.setItem("login",JSON.stringify(userDatas));
+        
+        }
+        else{
+            alert("Invalid email or password")
+        }
+       
+    });
+</script>
