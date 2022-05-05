@@ -29,6 +29,9 @@ window.addEventListener("mouseup",function(event){
         document.querySelector("body").style.overflow="auto"
     }
 })
+var cartItemsNo = document.querySelector("#itemsNo");
+var cartArr = [];
+cartItemsNo.innerText = cartArr.length;
 
 
   

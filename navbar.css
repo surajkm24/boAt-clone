@@ -197,7 +197,7 @@ body {
 #cartContent>div {
     background-color: aliceblue;
     width: 450px;
-    height: 88%;
+    height: 86.5%;
     margin-top: -20px;
 }
 
@@ -225,4 +225,16 @@ body {
     position:absolute;
     top:50%;
     left:29%;
+}
+sup{
+    position:absolute;
+    background-color:red;
+    min-height:20px;
+    min-width:20px;
+    text-align: center;
+    font-size:17px;
+    border-radius: 100%;
+    top:15px;
+    right:20px;
+    padding:4px;
 }
