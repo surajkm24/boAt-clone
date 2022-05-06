@@ -21,7 +21,7 @@ body {
 #nav {
     background-color: black;
     height: 77px;
-    max-width: 100%;
+   max-width:100%;
     display: flex;
     justify-content: space-between;
     padding: 0px 40px;
@@ -165,7 +165,7 @@ body {
 
 #userCart>#cartContent {
     position: absolute;
-    width: 450px;
+    width:29%;
     right: 0px;
     top: -19px;
 
@@ -185,33 +185,37 @@ body {
 }
 
 #cartContent>p:nth-child(2) {
-    color: white;
+    color: rgba(255, 255, 255, 0.889);
     background-color: black;
     margin-top: -19px;
     padding: 5px 15px 13px 15px;
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 #cartContent>div {
     background-color: aliceblue;
-    width: 450px;
-    height: 86.5%;
+    width:100%;
+    height:84%;
     margin-top: -20px;
 }
 
 #empCart {
     text-align: center;
+    display:grid;
+    justify-content: center;
 }
 
 #empCart>p {
     text-align: center;
     font-size: 20px;
     font-family: sans-serif;
-    position:absolute;
-    top:40%;
-    left:35%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 #empCart>button {
@@ -222,9 +226,10 @@ body {
     letter-spacing: 2px;
     padding: 18px 25px;
     border-radius: 5px;
-    position:absolute;
+    height:20%;
+    /* position:absolute;
     top:50%;
-    left:29%;
+    left:29%; */
 }
 sup{
     position:absolute;
@@ -237,4 +242,76 @@ sup{
     top:15px;
     right:20px;
     padding:4px;
+}
+#empCart>div{
+    border: 1px solid black;
+    border-width: 0px 0px 2px 0px;
+    height:150px;
+    margin-top:0px;
+}
+#empCart>div>div:first-child{
+    width:30%;
+}
+#empCart>div>div:first-child>img{
+    width:80%;
+    margin:auto;
+    padding: 30px 0px 20px 0px;
+}
+#empCart>div>div:last-child{
+    padding:10px 10px;
+}
+#empCart>div>div:last-child>p:first-child{
+     font-size:16px;
+     font-family:sans-serif;
+     font-weight:700;
+     text-align: left;
+}
+#empCart>div>div>div>p:first-child{
+    color:red;
+    font-size:17px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+#empCart>div>div>div>p:last-child{
+    color:rgba(100, 96, 96, 0.665);
+    font-size:12px;
+    font-family:sans-serif;
+    font-weight:bold;
+    text-decoration:line-through;
+}
+#empCart>div>div>div{
+    margin-top:-20px;
+    align-items: baseline;
+    gap:20px;
+}
+#empCart>div>div>div>div{
+    align-items: center;
+    gap:15%;
+}
+#empCart>div>div>div>div>p:first-child{
+    color:red;
+    border-radius:100%;
+    border:1px solid black;
+    padding:5px 5px;
+    cursor:pointer;
+}
+#empCart>div>div>div>div>p:last-child{
+    color:red;
+    border:1px solid black;
+    padding:5px 5px;
+    border-radius:100%;
+    cursor:pointer;
+}
+#empCart>div>div>div>div>p:nth-child(2){
+    font-size:15px;
+    color:black; 
+    font-family:'montserrat';
+}
+#empCart>div>div>div:last-child{
+    display:flex;
+    gap:40%;
+}
+#empCart>div>div>div:last-child>p{
+    cursor:pointer;
+    color:rgb(43, 44, 44);
 }
