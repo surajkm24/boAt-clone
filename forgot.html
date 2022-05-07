@@ -55,6 +55,7 @@
            background-color: #252525;
            border: 1px solid gray;
            border-radius: 5px; 
+           color:white;
    } 
    #submit{
            width:99%;
@@ -73,6 +74,7 @@
     <div>
         <form id="form">
             <input type="text" placeholder="E-mail" id="email">
+            <input type="password" placeholder="New Password" id="newpd">
             <input type="submit" value="RECOVER" id="submit">
             <span class="spanforgot">
                 Remember your password?
@@ -84,8 +86,8 @@
 </html>
 <script>
 
-    var form=document.querySelector("#submit")
-    var userData=JSON.parse(localStorage.getItem("login"))
+    var form=document.querySelector("form")
+    var userData=JSON.parse(localStorage.getItem("userData"))
     console.log(userData)
     
     // var data=document.querySelector("#email").value
@@ -97,21 +99,34 @@
 
 
         var data={
-            email:form.email.value
+            email:form.email.value,
+            password:form.newpd.value
         }
         console.log(data)
         if(userData==null)
         {
             alert("Create an account")
         }
-       else if(userData.email==data.email)
-        {
-            alert("MActh")
-            
-        }
         else{
-            alert("No account found with that email")
-        }
+            var found=false;
+            userData.forEach(function(ele){
+                if(ele.email==data.email)
+                {
+                    found=true;
+                    ele.password=data.password;
 
+                }
+            })
+            if (found)
+            {
+                alert("Password Change")
+
+                localStorage.setItem("userData",JSON.stringify(userData))
+                window.location.href="login.html"
+            }
+            else{
+                alert("Invalid Id")
+            }
+        }
     })
 </script>

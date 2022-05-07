@@ -31,13 +31,17 @@
         font-size: 22px;
         padding: 2%;
         width:90%;
-          
+        background-color: #252525;
+          border:1px solid gray;
+          color:white;
+
      }
      span{
          text-align: center;
-         margin-left:24%;
+         margin-left:22%;
          font-size: 15px;
-         color:white;
+         color:gray;
+         font-family: 'Montserrat', sans-serif;
      }
     #create{
         width:96%;
@@ -54,6 +58,12 @@
     .para{
         font-size: 15px;
     }
+    a:hover{
+            color:white;
+       }
+       a{
+           color:gray
+       }
     </style>
 </head>
 <body>
@@ -70,7 +80,7 @@
          <input type="submit" value="CREATE ACCOUNT" id="create">
          <span class="spanclass">
              Already have an account?
-             <a>Login</a>
+             <a href="login.html">Login</a>
          </span>
         </form>
     </div>
@@ -78,8 +88,10 @@
 </body>
 
 <script>
-    var form=document.querySelector("form");
-    form.addEventListener("submit",function(event){
+    var userArr=JSON.parse(localStorage.getItem("userData")) || [];
+    
+    
+    document.querySelector("#form").addEventListener("submit",function(){
         event.preventDefault();
 
         var data={
@@ -87,9 +99,12 @@
             userlastname:form.Lastname.value,
             email:form.email.value,
             password:form.password.value,
-        }
-        // console.log(data)
-        localStorage.setItem("userData",JSON.stringify(data));
+        }    
+            // console.log(data)
+             userArr.push(data)
+        
+      
+        localStorage.setItem("userData",JSON.stringify(userArr));
         window.location.href="login.html"
     })
 </script>

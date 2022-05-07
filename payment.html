@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Koulen&family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Koulen&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+
+<style>
+        #container{
+            height:585px;
+            width:70%;
+            margin:auto;
+            /* border:1px solid red; */
+            margin-top: 20px;
+            
+            
+            
+        }
+        #box{
+            height:565px;
+            width:100%;
+            /* margin:auto; */
+            margin-top: 10px;
+            /* border:1px solid black; */
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 565px;
+            gap:10px;
+            background-color: white;
+        }
+        #box>div{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 10px;
+        
+        }
+    input{
+        display: block;
+        padding: 2%;
+        margin: 25px;
+        width:70%;
+        border-radius: 10px;
+        border: 1px solid red;
+        outline: none;
+        font-size: 15px;
+        color: #333;
+       
+    }
+    .contact{
+       margin-left:8px;
+      
+    }
+      h2{
+    margin-left:20px;
+    font-family: 'Fira Sans', sans-serif;
+ }
+      h3{
+    margin-left:20px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+     .payment>img{
+    height: 100px;
+     width: 60%;
+     margin-top: 5px;
+     margin-left:15px;
+}
+   #submit{
+       background-color: black;
+       color: white;
+       border:0px;
+       margin-left:35px;
+       font-family: 'Montserrat', sans-serif;
+       
+   }
+   #pic{
+    height: 40px;
+     width: 95px;
+     margin-left: 15%;
+     margin-bottom: -10px;
+   }
+   body{
+       background-color: #252525;
+   }
+</style>
+</head>
+<body>
+
+    
+        <img id="pic" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229"/>
+        <div id="container">
+        <div id="box">
+            <!-- shipping Address -->
+            <div>
+            <h2>SHIPPING ADDRESS</h2>
+            <h3>Contact Details</h3>
+            <div class="contact">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Mobile No">
+            </div>
+           
+            <!-- Address -->
+            <div class="address">
+                <h3>Address</h3>
+                <input type="text" placeholder="Pin Code">
+                <input type="text" placeholder="Address(House No,Building,Street)">
+                <input type="text" placeholder="City/District">
+                <input type="text" placeholder="State">
+            </div>
+            </div>
+      
+            <!-- Payment Details -->
+            <div class="payment">
+                <h2>PAYMENT DETAILS</h2>
+                <h3>Cards Accepted</h3>
+                <img src="https://blink.ucsd.edu/_images/finance-tab/payment-cards/credit-card.png"/>
+         
+                <form id="form">
+                    <input type="text" placeholder="Name On Card" id="cardName">
+                    <input type="number"placeholder="Card Number" id="cardNumber" >
+                    <input type="date" placeholder="Expiry date" id="date">
+                    <input type="password" placeholder="CVV*" id="cvv">
+                    <input type="submit" value="PLACE ORDER" id="submit">
+                </form>
+            </div>
+         
+            
+            
+     <!-- Cart Details -->
+            <div>
+                <h2>ORDER DETAILS</h2>
+            </div>
+        </div>
+     
+    </div>
+    
+</body>
+</html>
+<script>
+        var payData=[
+                   {card:1111222233334444,date:2025-12-14,cvv:123},
+                   {card:1234567891234567,date:2026-10-03,cvv:786},
+                   {card:1111222233334444,date:2028-09-12,cvv:143}
+       
+       ];
+       var form=document.querySelector("#form")
+       form.addEventListener("submit",paymentfunction)
+
+      function paymentfunction(){
+          event.preventDefault();
+
+          var data={
+              name:form.cardName.value,
+              number:form.cardNumber.value,
+              cardDate:form.date.value,
+              cardcv:form.cvv.value
+          }
+            //  console.log(data)
+          localStorage.setItem("carddata",JSON.stringify(data))
+
+          var userdata=JSON.parse(localStorage.getItem("carddata"))
+
+       if(payData.card==userdata.number && payData.date==userdata.cardDate && payData.cvv==userdata.cardcv)
+       {
+           alert("Payment Successful");
+        //    window.location.href=""
+       }
+       else{
+           alert("Invalid Card details")
+       }
+
+
+      }
+
+</script>

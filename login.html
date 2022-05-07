@@ -7,8 +7,8 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
 
     <style>
         form {
@@ -19,7 +19,7 @@
              margin-top:-1px;
              background-color: #252525;
              
-   }
+         }
         input{
            display: block;
            margin: 15px auto;
@@ -29,6 +29,7 @@
            background-color: #252525;
            border: 1px solid gray;
            border-radius: 5px;
+           color:white;
          
              
         }
@@ -43,6 +44,7 @@
            color:white;
            border:0px;
            border-radius: 5px;
+           font-family: 'Montserrat', sans-serif;
        }
        .fb{
            font-size: 35px;
@@ -66,6 +68,7 @@
         .spanclass{
             color:gray;
          margin-left:24%;
+         font-family: 'Montserrat', sans-serif;
         }
         a:hover{
             color:white;
@@ -81,7 +84,7 @@
            border:1px solid gray;
            border-radius: 5px;
            width: fit-content;
-          color:white;
+             color:white;
            padding:5px;
            display: flex;
        }
@@ -89,11 +92,12 @@
            border-radius: 5px;
            height: 1px;
            border:none;
+           outline: none;
            
        }
        #input>input>span{
            font-size: 8px !important;
-          margin: 12px;
+            margin: 12px;
           
        }
     </style>
@@ -116,7 +120,7 @@
 
             <div id="input">
                 <input type="password" placeholder="Enter Password" id="password"/>
-                <span><a href="forgot.html">Forgot Password?</a></span>
+                <span style="white-space:nowrap"><a href="forgot.html">Forgot Password?</a></span>
 
             </div>
            
@@ -134,6 +138,7 @@
 <script>
     var form=document.querySelector("form");
     var userDatas=JSON.parse(localStorage.getItem("userData"));
+
     console.log(userDatas)
     form.addEventListener("submit",function(event){
         event.preventDefault();
@@ -147,15 +152,26 @@
             alert("Please Create an account");
             // window.location.href="Signup.html"
         }
-        else if(userDatas.email==data.email && userDatas.password==data.password)
-        {
-         alert("Login Successfully");
-         localStorage.setItem("login",JSON.stringify(userDatas));
-        
-        }
         else{
-            alert("Invalid email or password")
+            var found=false;
+            userDatas.forEach(function(ele){
+                if(ele.email==data.email && ele.password==data.password)
+                {
+                    found=true;
+                }
+            })
+            if (found)
+            {
+                alert("Login Successful")
+                window.location.href="index.html"
+            }
+            else{
+                alert("Invalid email-ID or Password")
+            }
+
         }
+
+       
        
     });
 </script>
