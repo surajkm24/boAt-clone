@@ -45,58 +45,7 @@ document.querySelector("#cross1").addEventListener("click", function () {
 //     }
 // })
 var cartItemsNo = document.querySelector("#itemsNo");
-var cartArr = [
-    {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "boAt Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },
-    {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "boAt Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },
-    {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "boAt Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },
-    {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "boAt Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    }, {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "At Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },
-    {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "Ate Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },  {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "At Stone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },  {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "Ate Sone 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    },  {
-        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
-        name: "Ate Stoe 1450",
-        price: "3999.00",
-        original_price: "6,999.00"
-    }
-];
+var cartArr = JSON.parse(localStorage.getItem("cartData"))||[];
 var c1 = 0;
 cartItemsNo.innerText = cartArr.length;
 showCart(cartArr);
