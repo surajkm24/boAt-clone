@@ -1,0 +1,192 @@
+body{
+    padding:0rem;
+    margin:0rem;
+}
+#ranking{
+    width:100%;
+    background-color:black;
+}
+#ranking>img{
+    width:100%;
+    padding-bottom:80rem;
+}
+#brand{
+    background-color:rgb(31, 31, 31);
+    color:white;
+    margin-top:-25rem;
+    padding-top:40rem;
+}
+#service{
+    display:flex;
+    width:65%;
+    margin:auto;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+    font-size: 18rem;
+    padding:20rem 0rem 50rem 0rem;
+}
+#service>div:first-child>img:first-child,#service>div:nth-child(3)>img:first-child{
+    width:65%;
+}
+#service>div:nth-child(5)>img{
+    width:90%;
+}
+#brd{
+    background-color:rgb(53, 51, 51);
+    color:white;
+    margin-top:-16rem;
+    padding:10rem 15%;
+    font-family:sans-serif;
+    text-align: center;
+    font-size:15rem;
+}
+#boatBt{
+    background:black;
+    border: 1rem black solid;
+    color:white;
+    padding-bottom:30rem;
+}
+html{
+    font-size: 6.25%;
+}
+
+#boatOptions{
+    display:flex;
+    width:94%;
+    margin:auto;
+    justify-content:flex-start;
+    gap:6%;
+    padding:40rem 0rem;
+}
+#boatOptions>div>div:first-child>img{
+     height:44rem;
+}
+#boatOptions>div:first-child{
+    padding-top:30rem;
+}
+#boatOptions p{
+    color:rgba(255, 255, 255, 0.68);
+    font-family:sans-serif;
+    font-size:15rem;
+}
+#boatOptions>div{
+    width:auto;
+    padding-left:2%;
+}
+#boatOptions>div:first-child{
+ width:37%;
+ padding-left:0%;
+}
+#boatOptions>div>p:first-child{
+    color:white;
+    font-weight:bold;
+    font-size:17rem;
+}
+#boatOptions>div>div:nth-child(3){
+border: 2rem solid rgba(255, 255, 255, 0.344);
+padding:5rem;
+border-radius:5rem;
+width:100%;
+}
+#boatOptions>div>div>input{
+    padding: 14rem 10rem;;
+    font-size:15rem;
+    outline:none;
+    background-color:black;
+    border:none;
+    color:rgba(255, 255, 255, 0.649);
+    width:55%;
+}
+#boatOptions>div>div>button{
+    border:none;
+    background-color:red;
+    color:white;
+    font-size:14rem;
+    padding:14rem 60rem;
+    font-family:'Montserrat';
+    border-radius:3rem;
+}
+#boatOptions>div>div:last-child{
+    display:flex;
+    margin-top:40rem;
+}
+#boatOptions>div>div>div{
+    display:flex;
+    justify-content: center;
+    width:12%;
+    height:60rem;
+    align-items: center;
+}
+#boatOptions>div>div>div:first-child{
+    border-radius:10rem 0rem 0rem 10rem;
+}
+#boatOptions>div>div>div:last-child{
+    border-radius:0rem 10rem 10rem 0rem;
+}
+#boast{
+    display:flex;
+    width:88%;
+    margin:auto;
+    margin-top:60rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:17rem;
+}
+#boast>div:first-child{
+    width:30%;
+}
+#boast>div>img{
+    width:100%;
+}
+#boast>div:nth-child(2){
+    display:flex;
+    align-items: center;
+    font-size: 17rem;
+    font-family:sans-serif;
+    font-weight:bold;
+    width:50%;
+    justify-content: flex-end;
+    gap:5%;
+    padding-right:10%;
+}
+#boast>div>p{
+    white-space: nowrap;
+}
+#boast>div:last-child>img{
+    width:25%;
+}
+#news{
+background-color:rgba(0, 0, 0, 0.87);
+margin-top:-29rem;
+padding-top:60rem;
+padding-bottom:60rem;
+}
+#news>h1{
+    font-size:44rem;
+    font-family:'Montserrat';
+    color:white;
+    text-align:center;
+}
+#news>h4{
+    font-size:19rem;
+    font-family:sans-serif;
+    color:white;
+    text-align:center;
+    font-weight:200;
+    letter-spacing:1px;
+    margin-top:50rem;
+}
+#news>div{
+    display:flex;
+    width:85%;
+    margin:auto;
+    justify-content: space-around;
+    margin-top:60rem;
+}
+#news>div>div{
+    width:20%;
+}
+#news>div>div>img{
+    width:70%;
+}
