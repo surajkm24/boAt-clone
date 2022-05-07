@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+<style>
+        .page_header{
+            text-align: center;
+            color:white;
+        }
+
+        body{
+            background-color: #252525;
+        }
+      
+       form {
+          width: 400px;
+          margin: 3% auto;
+           padding: 3%;
+          background: #252525;
+          
+}
+     input{
+        display: block;
+        margin: 20px auto;
+        font-size: 22px;
+        padding: 2%;
+        width:90%;
+        background-color: #252525;
+          border:1px solid gray;
+          color:white;
+
+     }
+     span{
+         text-align: center;
+         margin-left:22%;
+         font-size: 15px;
+         color:gray;
+         font-family: 'Montserrat', sans-serif;
+     }
+    #create{
+        width:96%;
+        background-color: red;
+        color:white;
+        border:0px;
+        font-size: 13px;
+        font-family: 'Montserrat', sans-serif;
+      
+    }
+    .heading{
+        font-size:48px;
+    }
+    .para{
+        font-size: 15px;
+    }
+    a:hover{
+            color:white;
+       }
+       a{
+           color:gray
+       }
+    </style>
+</head>
+<body>
+    <div class="page_header">
+        <h1 class="heading">Register</h1>
+        <p class="para">Please fill in the fields below:</p>
+    </div>
+    <div class="formpage">
+        <form id="form">
+         <input type="text" placeholder="First name" id="Firstname">
+         <input type="text" placeholder="Last name" id="Lastname">
+         <input type="text" placeholder="E-mail" id="email">
+         <input type="Password" placeholder="Password" id="password">
+         <input type="submit" value="CREATE ACCOUNT" id="create">
+         <span class="spanclass">
+             Already have an account?
+             <a href="login.html">Login</a>
+         </span>
+        </form>
+    </div>
+
+</body>
+
+<script>
+    var userArr=JSON.parse(localStorage.getItem("userData")) || [];
+    
+    
+    document.querySelector("#form").addEventListener("submit",function(){
+        event.preventDefault();
+
+        var data={
+            username:form.Firstname.value,
+            userlastname:form.Lastname.value,
+            email:form.email.value,
+            password:form.password.value,
+        }    
+            // console.log(data)
+             userArr.push(data)
+        
+      
+        localStorage.setItem("userData",JSON.stringify(userArr));
+        window.location.href="login.html"
+    })
+</script>
+</html>

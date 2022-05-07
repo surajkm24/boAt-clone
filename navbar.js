@@ -242,3 +242,18 @@ document.querySelector("#userMenu>button").addEventListener("click",function(eve
         window.location.href="index.html";
     }
 })
+document.querySelector("#btn5").addEventListener("click",function(){
+var image=document.querySelector("#tyagi>img").getAttribute("src");
+var name=document.querySelector("#st>h1").innerText;
+var localprice=document.querySelector("#suraj>p:first-child>span").innerText;
+var originalprice=document.querySelector("#suraj>p:nth-child(2)").innerText;
+var obj={
+    image_url:image,
+    name:name,
+    price:localprice,
+    original_price:originalprice
+}
+cartArr.push(obj);
+localStorage.setItem("cartData",JSON.stringify(cartArr));
+showCart(cartArr);
+})
