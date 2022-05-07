@@ -379,7 +379,7 @@
           <script src="navbar.js"></script>
           <script src="bottom.js"></script>
 <script>
-    
+
     var form=document.querySelector("form");
     var userDatas=JSON.parse(localStorage.getItem("userData"));
 
@@ -405,7 +405,10 @@
                 }
             })
             if (found)
-            {
+            {   
+                var login = data.email;
+        
+                localStorage.setItem("login",JSON.stringify(login));
                 alert("Login Successful")
                 window.location.href="index.html"
             }
