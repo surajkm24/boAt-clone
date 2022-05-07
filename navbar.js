@@ -80,15 +80,31 @@ var cartArr = [
         name: "Ate Stone 1450",
         price: "3999.00",
         original_price: "6,999.00"
+    },  {
+        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
+        name: "At Stone 1450",
+        price: "3999.00",
+        original_price: "6,999.00"
+    },  {
+        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
+        name: "Ate Sone 1450",
+        price: "3999.00",
+        original_price: "6,999.00"
+    },  {
+        image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_1_3b4cc1b8-e1ed-4809-9ded-38355df461a1_600x.png?v=1651596525",
+        name: "Ate Stoe 1450",
+        price: "3999.00",
+        original_price: "6,999.00"
     }
 ];
+var c1 = 0;
 cartItemsNo.innerText = cartArr.length;
 showCart(cartArr);
 function showCart(cartArr) {
     if (cartArr.length === 0) {
         cartItemsNo.innerText = cartArr.length;
         document.querySelector("#empCart").innerHTML = "";
-        document.querySelector("#empCart").innerHTML = " <p>Your cart is empty</p> <button style='cursor:pointer;'>START SHOPPING</button>"
+        document.querySelector("#empCart").innerHTML = " <p>Your cart is empty</p> <button onclick='goToShop()' style='cursor:pointer;'>START SHOPPING</button>"
         document.querySelector("#empCart").style.display="grid";
             document.querySelector("#empCart").style.justifyContent="center";
             // document.querySelector("#empCart").style.flexDirection="column";
@@ -217,10 +233,63 @@ function showCart(cartArr) {
             document.querySelector("#empCart").style.justifyContent="flex-start";
             document.querySelector("#empCart").style.flexDirection="column";
         })
-
-
+        var order = document.createElement("div");
+        order.setAttribute("id","disc");
+        var disbox1 = document.createElement("section");
+        disbox1.style.display="flex";
+        var disBox = document.createElement("input");
+        disBox.setAttribute("placeholder","Discount Code");
+        disBox.setAttribute("type","text");
+        var p1 = document.createElement("p");
+        p1.innerText = "Apply";
+        p1.addEventListener("click",function(){
+            c1++;
+            var coupon = document.querySelector("#disc>section>input").value;
+            if(coupon==="masai30"&&c1<=1){
+                Tprice=Math.floor(Tprice*(7/10));
+                var price3 = "Rs. "+Tprice+".00"
+                document.querySelector("#disc>section+p+p>span").innerText = price3;
+            }
+        })
+        disbox1.append(disBox,p1)
+        var p2 = document.createElement("p");
+        p2.innerText="SHIPPING:"
+        var span1 = document.createElement("span");
+        span1.innerText = "FREE";
+        var p3 = document.createElement("p");
+        p3.innerText="TOTAL:"
+        var span2 = document.createElement("span");
+        span2.innerText = "Rs. "+Tprice+".00";
+        p2.append(span1);
+        p3.append(span2);
+        var orderButton = document.createElement("button");
+        orderButton.innerText="PLACE ORDER"
+        order.append(disbox1,p2,p3,orderButton);
+        document.querySelector("#empCart").append(order)
     }
 }
+function goToShop(){
+    cart.style.display = "none";
+    document.querySelector("body").style.overflow = "auto"
+    window.location.href="index.html#shoP";
+}
 
-
-
+document.querySelector("#btns1>p").addEventListener("click",function(){
+    window.location.href="index.html#shoP";
+})
+var login = localStorage.getItem("login");
+if(login) {
+    document.querySelector("#userMenu").innerHTML=" <p>Hi boAthead!<span id='cross' style='color:white;font-size:25px;'>&times</span></p><button >Logout</button>"
+}
+else {
+    document.querySelector("#userMenu").innerHTML=" <p>Hi boAthead!<span id='cross' style='color:white;font-size:25px;'>&times</span></p><button >Login</button>"
+}
+document.querySelector("#userMenu>button").addEventListener("click",function(event){
+    if(event.target.innerText==="Login"){
+        window.location.href="login.html";
+    }
+    else {
+        localStorage.removeItem("login");
+        window.location.href="index.html";
+    }
+})

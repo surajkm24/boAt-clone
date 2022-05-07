@@ -133,6 +133,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size:18px;
 }
 
 #userMenu>button {
@@ -153,7 +154,6 @@ body {
 #userCart {
     display: none;
     position: fixed;
-    z-index: 100;
     right: 0px;
     top: 0;
     width: 100%;
@@ -207,6 +207,7 @@ body {
     text-align: center;
     display:grid;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 #empCart>p {
@@ -314,4 +315,72 @@ sup{
 #empCart>div>div>div:last-child>p{
     cursor:pointer;
     color:rgb(43, 44, 44);
+}
+#empCart>div:nth-last-child(2){
+    padding-bottom:240px;
+}
+#empCart>#disc{
+    position:fixed;
+    bottom:0px;
+    border:none;
+    background-color:white;
+    width:29%;
+    margin:auto;
+   height:29%;
+   border-top: 5px rgba(128, 128, 128, 0.793) solid;;
+}
+#disc>section{
+    border:1px dotted gray;
+    font-size:15px;
+    font-weight:bold;
+    font-family:sans-serif;
+    padding:0px 15px;
+    background-color:rgb(226, 219, 219);
+    border-radius:35px;
+    width:75%;
+    height:40px;
+    align-items:center;
+    margin:auto;
+    margin-top:15px;
+}
+#disc>section>input{
+    background-color:rgb(226, 219, 219);
+    border:none;
+    outline:none;
+    width:85%;
+}
+#disc>section>p{
+    cursor:pointer;
+}
+#disc>section+p{
+    font-size:18px;
+    font-weight:550;
+    font-family:sans-serif;
+    color:black;
+    width:auto;
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin:10px auto;
+}
+#disc>section+p+p{
+    font-size:18px;
+    font-weight:550;
+    font-family:sans-serif;
+    color:black;
+    width:auto;
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin:10px auto;
+}
+#disc>section+p+p+button{
+    background:rgb(255, 60, 0);
+    color:white;
+    font-size:20px;
+    font-weight:650;
+    padding:10px 20px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
 }
