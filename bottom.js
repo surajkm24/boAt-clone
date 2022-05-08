@@ -12,3 +12,12 @@ function returnOg(event){
    path.style.fill="white";
    path.style.backgroundColor="black";
 }
+
+document.querySelector("#boatOptions>div>div>button").addEventListener("click",function(){
+   var value = document.querySelector("#boatOptions>div>div>input").value
+        if(value){
+    alert("You have successfully subscribed for email alerts.")}
+    else {
+        alert("Enter Email!")
+    }
+})
