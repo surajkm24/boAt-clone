@@ -230,9 +230,9 @@
                 <img src="https://blink.ucsd.edu/_images/finance-tab/payment-cards/credit-card.png"/>
          
                 <form id="form">
-                    <input type="text" placeholder="Name On Card" id="cardName">
+                    <input type="text" placeholder="Name On Card" id="cardName" required>
                     <input type="number"placeholder="Card Number" id="cardNumber" >
-                    <input type="" placeholder="Expiry date" id="date">
+                    <input type="month" placeholder="Expiry date" id="date" required>
                     <input type="password" placeholder="CVV*" id="cvv">
                     <input type="submit" value="PLACE ORDER" id="submit">
                 </form>
@@ -324,7 +324,7 @@
 
           
 
-       if(x=="Ayesha Khan" && y=="1234567890" && z=="2025-12" && p=="123")
+       if(y=="1234567890" &&  p=="123")
        {
            alert("Payment Successful");
            window.location.href="paymentsuccess.html"
