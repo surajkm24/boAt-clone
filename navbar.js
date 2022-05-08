@@ -45,9 +45,30 @@ document.querySelector("#cross1").addEventListener("click", function () {
 //     }
 // })
 var cartItemsNo = document.querySelector("#itemsNo");
+var login = localStorage.getItem("login");
+console.log(login);
+
 var cartArr = JSON.parse(localStorage.getItem("cartData"))||[];
 var c1 = 0;
 cartItemsNo.innerText = cartArr.length;
+
+if(login) {
+    document.querySelector("#userMenu").innerHTML=" <p>Hi boAthead!<span id='cross' style='color:white;font-size:25px;'>&times</span></p><button >Logout</button>"
+}
+else {
+    document.querySelector("#userMenu").innerHTML=" <p>Hi boAthead!<span id='cross' style='color:white;font-size:25px;'>&times</span></p><button >Login</button>"
+}
+document.querySelector("#userMenu>button").addEventListener("click",function(event){
+    if(event.target.innerText==="Login"){
+        window.location.href="login.html";
+    }
+    else {
+        localStorage.removeItem("login");
+        window.location.href="index.html";
+    }
+})
+
+
 showCart(cartArr);
 function showCart(cartArr) {
     if (cartArr.length === 0) {
@@ -213,6 +234,16 @@ function showCart(cartArr) {
         p3.append(span2);
         var orderButton = document.createElement("button");
         orderButton.innerText="PLACE ORDER"
+        orderButton.addEventListener("click",function(){
+            if(login){
+                window.location.href="payment.html";
+                
+            }
+            else{
+                alert("Please Login First!")
+                window.location.href="login.html"
+            }
+        })
         order.append(disbox1,p2,p3,orderButton);
         document.querySelector("#empCart").append(order)
     }
@@ -241,4 +272,19 @@ document.querySelector("#userMenu>button").addEventListener("click",function(eve
         localStorage.removeItem("login");
         window.location.href="index.html";
     }
+})
+document.querySelector("#btn5").addEventListener("click",function(){
+var image=document.querySelector("#tyagi>img").getAttribute("src");
+var name=document.querySelector("#st>h1").innerText;
+var localprice=document.querySelector("#suraj>p:first-child>span").innerText;
+var originalprice=document.querySelector("#suraj>p:nth-child(2)").innerText;
+var obj={
+    image_url:image,
+    name:name,
+    price:localprice,
+    original_price:originalprice
+}
+cartArr.push(obj);
+localStorage.setItem("cartData",JSON.stringify(cartArr));
+showCart(cartArr);
 })
