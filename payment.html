@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Koulen&family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Koulen&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
-
+     
 <style>
         #container{
             height:585px;
@@ -85,32 +85,143 @@
    body{
        background-color: #252525;
    }
+
+   #ayeshabox{
+       height:110px;
+       width:100%;
+       /* border: 1px solid black; */
+       margin: auto;
+       display: flex;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    #parent1{
+        height: 90%;
+        width: 30%;
+        /* border: 1px solid black; */
+       margin-top: 4px;
+       margin-left: 4px;
+       
+    }
+    #parent2{
+        height: 90%;
+        width: 65%;
+        /* border: 1px solid black; */
+        margin-top: 4px;
+         margin-left: 9px; 
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+    img{
+        max-width: 95px;
+        height: auto;
+         }
+  
+   #quantity{
+       margin-top:-18px;
+   }
+   .payment{
+       display:none;
+   }
+   #parent2>p{
+    font-family: 'Montserrat', sans-serif;
+
+   }
+   #quantity{
+       margin-top: 3px;
+   }
+   #price{
+    margin-top: 5px;
+   }
+   #rupesh{
+    height:145px;
+       width:100%;
+       /* border: 1px solid black; */
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+       margin-top: 10px;
+   }
+   #tea{
+       display: flex;
+       justify-content: space-between;
+   }
+   #tea>h4{
+       margin-left: 15px;
+       font-family: 'Montserrat', sans-serif;
+   }
+   #coffee{
+       display: flex;
+       justify-content: space-between;
+       margin-top: -13px;
+      } 
+      #coffee>p{
+        margin-left: 15px;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      #raham{
+       display: flex;
+       justify-content: space-between;
+       margin-top: -13px;
+      } 
+      #raham>p{
+        margin-left: 15px;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      #pizza{
+       display: flex;
+       justify-content: space-between;
+       margin-top: -13px;
+      } 
+
+      button{
+           width:42%;
+           margin-left:22%;
+           background-color: black;
+           color: white;
+           font-family: 'Montserrat', sans-serif;
+           border:0px;
+           border-radius:5px;
+           padding: 2%;
+      }
+      #coffee>span{
+          margin-right: 5px;
+      }
+      #raham>span{
+          margin-right: 5px;
+      }
 </style>
 </head>
-<body>
+<body>    
+               
+                  <!-- payment page -->
 
     
-        <img id="pic" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229"/>
+       <a href="index.html"> <img id="pic" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229"/></a>
         <div id="container">
         <div id="box">
             <!-- shipping Address -->
             <div>
             <h2>SHIPPING ADDRESS</h2>
-            <h3>Contact Details</h3>
-            <div class="contact">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Mobile No">
+            <div id="khanform">
+                <h3>Contact Details</h3>
+                <div class="contact">
+                    <input type="text" placeholder="Name" id="khanname">
+                    <input type="text" placeholder="Mobile No" id="ayeshanum">
+                </div>
+               
+                <!-- Address -->
+                <div class="address">
+                    <h3>Address</h3>
+                    <input type="text" placeholder="Pin Code" id="pincode">
+                    <input type="text" placeholder="Address(House No,Building,Street)" id="address">
+                    <input type="text" placeholder="City/District" id="city">
+                    <input type="text" placeholder="State" id="state">
+                   <button id="addresssubmit">NEXT</button>
+                </div>
+                </div>
+
             </div>
-           
-            <!-- Address -->
-            <div class="address">
-                <h3>Address</h3>
-                <input type="text" placeholder="Pin Code">
-                <input type="text" placeholder="Address(House No,Building,Street)">
-                <input type="text" placeholder="City/District">
-                <input type="text" placeholder="State">
-            </div>
-            </div>
+            
       
             <!-- Payment Details -->
             <div class="payment">
@@ -121,7 +232,7 @@
                 <form id="form">
                     <input type="text" placeholder="Name On Card" id="cardName">
                     <input type="number"placeholder="Card Number" id="cardNumber" >
-                    <input type="date" placeholder="Expiry date" id="date">
+                    <input type="" placeholder="Expiry date" id="date">
                     <input type="password" placeholder="CVV*" id="cvv">
                     <input type="submit" value="PLACE ORDER" id="submit">
                 </form>
@@ -132,41 +243,91 @@
      <!-- Cart Details -->
             <div>
                 <h2>ORDER DETAILS</h2>
+
+               <div id="ayeshabox">
+        <div id="parent1">
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008" alt="watch image"> 
+        </div>
+
+        <div id="parent2">
+        <p> boAt Watch Xtend-Pitch B...</p>
+        <div id="quantity">
+            <td>Quantity:<span>2</span></td>
+        </div>
+
+        <div id="price">
+            <td>Price:<span>₹<SPAN>2499.00</span></td>
+        </div>
             </div>
+        </div>
+        <div id="rupesh">
+           <div id="tea">
+               <h4>Subtotal</h4>
+               <p>₹4998.00</p>
+            </div>
+               <div id="coffee">
+                   <p>Coupon Discount</p>
+                   <span>-₹0.00</span>
+               </div>
+             
+               <div id="raham">
+                <p>Prepaid Discount</p>
+                <span>-₹0.00</span>
+               </div>
+
+               <div id="pizza">
+                   <h3>To Pay</h3>
+                   <h3>₹4998.00</h3>
+               </div>
+          
         </div>
      
     </div>
+
+      
     
 </body>
 </html>
+      
 <script>
-        var payData=[
-                   {card:1111222233334444,date:2025-12-14,cvv:123},
-                   {card:1234567891234567,date:2026-10-03,cvv:786},
-                   {card:1111222233334444,date:2028-09-12,cvv:143}
+    //    var form1=document.querySelector("#khanform");
+      document.querySelector("#addresssubmit").addEventListener("click",checkdetails)
+
+       function checkdetails(){
+           var a=document.querySelector("#khanname").value;
+           var b=document.querySelector("#ayeshanum").value;
+           var c=document.querySelector("#pincode").value;
+           var h=document.querySelector("#address").value;
+           var k=document.querySelector("#city").value;
+           var t=document.querySelector("#state").value;
+           console.log(a,b,c,h,k,t)
+           if(a.length!=0 && b.length==10 && c.length==6 && k.length!=0 && t.length!=0)
+           {
+            document.querySelector(".payment").style.display="block";
+           
+           }
+          
+       }
        
-       ];
        var form=document.querySelector("#form")
        form.addEventListener("submit",paymentfunction)
 
       function paymentfunction(){
           event.preventDefault();
 
-          var data={
-              name:form.cardName.value,
-              number:form.cardNumber.value,
-              cardDate:form.date.value,
-              cardcv:form.cvv.value
-          }
-            //  console.log(data)
-          localStorage.setItem("carddata",JSON.stringify(data))
+        
+         var x= document.querySelector("#cardName").value;
+         var y=document.querySelector("#cardNumber").value;
+         var z=document.querySelector("#date").value;
+         var p=document.querySelector("#cvv").value;
+          console.log(x,y,z,p)
 
-          var userdata=JSON.parse(localStorage.getItem("carddata"))
+          
 
-       if(payData.card==userdata.number && payData.date==userdata.cardDate && payData.cvv==userdata.cardcv)
+       if(x=="Ayesha Khan" && y=="1234567890" && z=="2025-12" && p=="123")
        {
            alert("Payment Successful");
-        //    window.location.href=""
+           window.location.href="paymentsuccess.html"
        }
        else{
            alert("Invalid Card details")
