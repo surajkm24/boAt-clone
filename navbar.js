@@ -46,6 +46,7 @@ document.querySelector("#cross1").addEventListener("click", function () {
 // })
 var cartItemsNo = document.querySelector("#itemsNo");
 var login = localStorage.getItem("login");
+console.log(login);
 
 var cartArr = JSON.parse(localStorage.getItem("cartData"))||[];
 var c1 = 0;
@@ -233,13 +234,14 @@ function showCart(cartArr) {
         p3.append(span2);
         var orderButton = document.createElement("button");
         orderButton.innerText="PLACE ORDER"
-        order.addEventListener("click",function(){
+        orderButton.addEventListener("click",function(){
             if(login){
-                alert("Please Login First!")
-                window.location.href="login.html"
+                window.location.href="payment.html";
+                
             }
             else{
-                window.location.href="payment.html";
+                alert("Please Login First!")
+                window.location.href="login.html"
             }
         })
         order.append(disbox1,p2,p3,orderButton);
