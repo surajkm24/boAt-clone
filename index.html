@@ -494,7 +494,7 @@
                         <div class="description">
                             <button class="des">DESCRIPTION</button>
                             <button class="fea">FEATURES</button>
-                            <div ><p>Focus on what matters with Airdopes 500 ANC that helps you tap out of chaos. Block unwanted background noise 
+                            <div ><p style="font-size:15px">Focus on what matters with Airdopes 500 ANC that helps you tap out of chaos. Block unwanted background noise 
                             upto 35 dB with its Hybrid Active Noise Cancellation. Make your calls crystal clear with...</p></div>
                             </div>
                             
@@ -1009,8 +1009,8 @@
         dots[imgNumber - 1].className += " modDot";
     }
    
-//   var des = document.querySelector(".fea+div");
-//   des.style.display="block"
+  var des = document.querySelector(".fea+div");
+  des.style.display="block"
 //   var fea =document.querySelector(".fea+div+div");
 //   fea.style.display="none"
 //   document.querySelector(".des").addEventListener("click",function(){
@@ -1033,6 +1033,11 @@
   function gotoTopseller(){
       window.location.href="index.html#shoP";
   }
+
+  document.querySelector(".slide1").addEventListener("click",function(){
+      window.location.href="airdopes500anc.html"
+  })
+
   function gotoAirdopes441(){
       window.location.href="airdopes441.html"
   }
@@ -1045,4 +1050,5 @@
   function gotoAirdopes681(){
       window.location.href="airdopes681.html"
   }
+
   </script>
