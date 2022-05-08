@@ -195,3 +195,6 @@ p+p+p>img{
     padding-top:5px;
 
 } */
+#ion>h1+p{
+    padding-bottom:50px !important;
+}
