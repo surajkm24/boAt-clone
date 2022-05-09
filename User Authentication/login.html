@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="bottom.css">
+    <link rel="stylesheet" href="..\Homepage\navbar.css">
+    <link rel="stylesheet" href="..\Homepage\bottom.css">
     <style>
         form {
              width: 400px;
@@ -121,7 +121,7 @@
         </div>
         <div id="nav">
             <div id="logo">
-                <a href="index.html">
+                <a href="..\Homepage\index.html">
                     <img
                         src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229" />
                 </a>
@@ -136,7 +136,7 @@
                 <div id="btns2">
                     <div>
                         <div>
-                            <img src="search.png" />
+                            <img src="..\Homepage\search.png" />
                         </div>
                         <input style="border: none;font-size: 18px; font-family: sans-serif; padding-left: 10px;background-color: white;
                         outline: none;" type="search" id="search" placeholder="Search..." />
@@ -212,7 +212,7 @@
             <input type="submit" value="LOGIN" id="submit">
             <span class="spanclass">
                    New customer?
-                <a href="signup.html">Create an account</a>
+                <a href="..\User Authentication\signup.html">Create an account</a>
             </span>
            
         </form>
@@ -376,8 +376,7 @@
 </html>   
 
           <!-- JS part -->
-          <script src="navbar.js"></script>
-          <script src="bottom.js"></script>
+         
 <script>
 
     var form=document.querySelector("form");
@@ -410,7 +409,7 @@
         
                 localStorage.setItem("login",JSON.stringify(login));
                 alert("Login Successful")
-                window.location.href="index.html"
+                window.location.href="../Homepage/index.html"
             }
             else{
                 alert("Invalid email-ID or Password")
@@ -422,3 +421,5 @@
        
     });
 </script>
+<script src="..\Homepage\navbar.js"></script>
+<script src="..\Homepage\bottom.js"></script>

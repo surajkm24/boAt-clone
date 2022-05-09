@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="bottom.css">
+<link rel="stylesheet" href="../Homepage/navbar.css">
+<link rel="stylesheet" href="../Homepage/bottom.css">
   
   <style>
 
@@ -80,7 +80,7 @@
         </div>
         <div id="nav">
             <div id="logo">
-                <a href="index.html">
+                <a href="../Homepage/index.html">
                     <img
                         src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229" />
                 </a>
@@ -95,7 +95,7 @@
                 <div id="btns2">
                     <div>
                         <div>
-                            <img src="search.png" />
+                            <img src="../Homepage/search.png" />
                         </div>
                         <input style="border: none;font-size: 18px; font-family: sans-serif; padding-left: 10px;background-color: white;
                         outline: none;" type="search" id="search" placeholder="Search..." />
@@ -157,7 +157,7 @@
          <input type="submit" value="CREATE ACCOUNT" id="create">
          <span class="spanclass">
              Already have an account?
-             <a href="login.html">Login</a>
+             <a href="../User Authentication/login.html">Login</a>
          </span>
         </form>
     </div>
@@ -314,8 +314,8 @@
      
          </div>
 </body>
-<script src="navbar.js"></script>
-<script src="bottom.js"></script>
+<script src="../Homepage/navbar.js"></script>
+<script src="../Homepage/bottom.js"></script>
 <script>
     var userArr=JSON.parse(localStorage.getItem("userData")) || [];
     
@@ -334,7 +334,7 @@
         
       
         localStorage.setItem("userData",JSON.stringify(userArr));
-        window.location.href="login.html"
+        window.location.href="../User Authentication/login.html"
     })
 </script>
 </html>

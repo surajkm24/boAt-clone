@@ -61,11 +61,11 @@ else {
 }
 document.querySelector("#userMenu>button").addEventListener("click",function(event){
     if(event.target.innerText==="Login"){
-        window.location.href="login.html";
+        window.location.href="../User Authentication/login.html";
     }
     else {
         localStorage.removeItem("login");
-        window.location.href="index.html";
+        window.location.href="../Homepage/index.html";
     }
 })
 
@@ -237,12 +237,12 @@ function showCart(cartArr) {
         orderButton.innerText="PLACE ORDER"
         orderButton.addEventListener("click",function(){
             if(login){
-                window.location.href="payment.html";
+                window.location.href="../Payment Page/payment.html";
                 
             }
             else{
                 alert("Please Login First!")
-                window.location.href="login.html"
+                window.location.href="../User Authentication/login.html"
             }
         })
         order.append(disbox1,p2,p3,orderButton);
@@ -252,11 +252,11 @@ function showCart(cartArr) {
 function goToShop(){
     cart.style.display = "none";
     document.querySelector("body").style.overflow = "auto"
-    window.location.href="index.html#shoP";
+    window.location.href="../Homepage/index.html#shoP";
 }
 
 document.querySelector("#btns1>p").addEventListener("click",function(){
-    window.location.href="index.html#shoP";
+    window.location.href="../Homepage/index.html#shoP";
 })
 var login = localStorage.getItem("login");
 if(login) {
@@ -267,11 +267,11 @@ else {
 }
 document.querySelector("#userMenu>button").addEventListener("click",function(event){
     if(event.target.innerText==="Login"){
-        window.location.href="login.html";
+        window.location.href="../User Authentication/login.html";
     }
     else {
         localStorage.removeItem("login");
-        window.location.href="index.html";
+        window.location.href="../Homepage/index.html";
     }
 })
 document.querySelector("#btn5").addEventListener("click",function(){
