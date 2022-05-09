@@ -50,12 +50,12 @@
     <ul><li>Github:AyeshaKhan14</li>
       <li>Github Link:https://github.com/AyeshaKhan14</li>
       <li>Email:ayeshatravels9@gmail.com</li>
-      <li>LinkedIn:https://www.linkedin.com/in/ayesha-khan-8a95691b9</li><ul>
+      <li>LinkedIn:https://www.linkedin.com/in/ayesha-khan-8a95691b9</li></ul>
   
-  <p>Suraj Kumar Mishra</p>
-    <ul><li>Github:surajkm24</li>
-      <li>Github Link:https://github.com/surajkm24</li>
-      <li>Email:surajkm336796@gmail.com</li>
-      <li>LinkedIn:https://www.linkedin.com/in/suraj-kumar-mishra-459b30215/</li><ul>
+ <h4>Suraj Kumar Mishra</h4>
+   <ul><li>Github:surajkm24</li>
+     <li>Github Link:https://github.com/surajkm24</li>
+     <li>Email:surajkm336796@gmail.com</li>
+     <li>LinkedIn:https://www.linkedin.com/in/suraj-kumar-mishra-459b30215/</li></ul>
   
   </html>
