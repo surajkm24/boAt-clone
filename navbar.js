@@ -1,5 +1,6 @@
 var user = document.querySelector("#userMenu")
-
+document.querySelector("title").innerText = "Buy Earbuds, Headphones, Earphones at India’s No.1 Earwear Brand: boAt";
+document.querySelector("head").innerHTML += "<meta name='description' content='Check out the breathtaking collection of Earbuds, Headphones, Earphones &amp; Wireless Speakers with contemporary designs and utmost features from India’s No.1 Earwear Audio Brand.' /><link rel='canonical' href='https://www.boat-lifestyle.com/' /><link rel='shortcut icon' href='//cdn.shopify.com/s/files/1/0057/8938/4802/files/32x32_256x256.png_32x32_2d0995d9-ec86-4c14-b928-71101777194c_96x96.png?v=1647426716' type='image/png' /> "
 var cart = document.querySelector("#userCart");
 document.querySelector("#userbtn").addEventListener("click", function () {
     user.style.display = "block";

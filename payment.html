@@ -104,7 +104,7 @@
         }
 
         .ayeshabox {
-           min-height: 110px;
+            min-height: 110px;
             width: 100%;
             /* border: 1px solid black; */
             margin: auto;
@@ -163,11 +163,11 @@
             /* border: 1px solid black; */
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             margin-top: 10px;
-            position:sticky;
-            bottom:3px;
-            background-color:white;
-            border:5px solid grey;
-            padding-bottom:4px;
+            position: sticky;
+            bottom: 3px;
+            background-color: white;
+            border: 5px solid grey;
+            padding-bottom: 4px;
         }
 
         #tea {
@@ -228,7 +228,8 @@
         #raham>span {
             margin-right: 5px;
         }
-        #ocp{
+
+        #ocp {
             overflow-y: scroll;
         }
     </style>
@@ -340,120 +341,119 @@
     var cartArr = JSON.parse(localStorage.getItem("cartData"));
     showCart(cartArr);
     function showCart(cartArr) {
-            document.querySelector("#empCart").innerHTML = "";
-            var Tprice = 0;
-            var totalItems = 0;
+        var Tprice = 0;
+        var totalItems = 0;
 
-            var uniqueCartItems = [];
-            var itemsQuantity = [];
+        var uniqueCartItems = [];
+        var itemsQuantity = [];
 
-            cartArr.forEach(function (ele) {
-                var flag = false;
-                for (var i = 0; i < uniqueCartItems.length; i++) {
-                    var obj = uniqueCartItems[i];
-                    if (obj.image_url === ele.image_url && obj.name === ele.name && obj.price === ele.price && obj.original_price === ele.original_price) {
-                        flag = true;
-                        break;
-                    }
+        cartArr.forEach(function (ele) {
+            var flag = false;
+            for (var i = 0; i < uniqueCartItems.length; i++) {
+                var obj = uniqueCartItems[i];
+                if (obj.image_url === ele.image_url && obj.name === ele.name && obj.price === ele.price && obj.original_price === ele.original_price) {
+                    flag = true;
+                    break;
                 }
-                if (flag) {
-                    itemsQuantity[i] = itemsQuantity[i] + 1;
-                }
-                else {
-                    uniqueCartItems.push(ele);
-                    itemsQuantity.push(1);
-                }
-            })
-            uniqueCartItems.forEach(function (ele, index) {
+            }
+            if (flag) {
+                itemsQuantity[i] = itemsQuantity[i] + 1;
+            }
+            else {
+                uniqueCartItems.push(ele);
+                itemsQuantity.push(1);
+            }
+        })
+        uniqueCartItems.forEach(function (ele, index) {
 
-                var box = document.createElement("div");
-                box.setAttribute("class","ayeshabox")
+            var box = document.createElement("div");
+            box.setAttribute("class", "ayeshabox")
 
-                var card1 = document.createElement("div");
-                card1.setAttribute("class","parent1")
+            var card1 = document.createElement("div");
+            card1.setAttribute("class", "parent1")
 
-                var img = document.createElement("img");
-                img.setAttribute("src", ele.image_url);
+            var img = document.createElement("img");
+            img.setAttribute("src", ele.image_url);
 
-                card1.append(img);
+            card1.append(img);
 
-                var card2 = document.createElement("div");
-                card2.setAttribute("class","parent2")
+            var card2 = document.createElement("div");
+            card2.setAttribute("class", "parent2")
 
-                var name = document.createElement("p");
-                name.innerText = ele.name
+            var name = document.createElement("p");
+            name.innerText = ele.name
 
-                var card3 = document.createElement("div");
-                card3.setAttribute("class","quantity")
+            var card3 = document.createElement("div");
+            card3.setAttribute("class", "quantity")
 
-                var td1 = document.createElement("td");
-                td1.innerText = "Quantity:"
+            var td1 = document.createElement("td");
+            td1.innerText = "Quantity:"
 
-                var span1 = document.createElement("span");
-                span1.innerText = itemsQuantity[index];
-                Tprice += itemsQuantity[index]*(Number(ele.price));
-                td1.append(span1);
-                card3.append(td1);
-                var card4 = document.createElement("div");
-                card4.setAttribute("class","price");
-                var td2 = document.createElement("td");
-                td2.innerText = "Price:"
+            var span1 = document.createElement("span");
+            span1.innerText = itemsQuantity[index];
+            Tprice += itemsQuantity[index] * (Number(ele.price));
+            td1.append(span1);
+            card3.append(td1);
+            var card4 = document.createElement("div");
+            card4.setAttribute("class", "price");
+            var td2 = document.createElement("td");
+            td2.innerText = "Price:"
 
-                var span2 = document.createElement("span");
-                span2.innerText = "₹";
+            var span2 = document.createElement("span");
+            span2.innerText = "₹";
 
-                var span3 = document.createElement("span");
-                span3.innerText = ele.price;
+            var span3 = document.createElement("span");
+            span3.innerText = ele.price;
 
-                td2.append(span2,span3);
-                card4.append(td2);
-                card2.append(name,card3,card4);
-                box.append(card1,card2)
-                document.querySelector("#ocp").append(box);
-               
-           
-            })
-           var rupesh = document.createElement("div");
-           rupesh.setAttribute("id","rupesh");
-           var tea = document.createElement("div");
-           tea.setAttribute("id","tea");
-           var h4 = document.createElement("h4");
-           h4.innerText="Subtotal"
-           var p8 = document.createElement("p");
-           p8.innerText = "₹"
-           var span4 = document.createElement("span");
-           span4.innerText = Tprice;
-           p8.append(span4);
-           tea.append(h4,p8);
-           var coffee = document.createElement("div");
-           coffee.setAttribute("id","coffee");
-           var p9 = document.createElement("p");
-           p9.innerText = "Coupon Discount"
-           var span5 = document.createElement("span");
-           span5.innerText = "₹0.00";
-           coffee.append(p9,span5);
-           var raham = document.createElement("div");
-           raham.setAttribute("id","raham");
-           var p10 = document.createElement("p");
-           p10.innerText = "Prepaid Discount"
-           var span6 = document.createElement("span");
-           span6.innerText = "₹0.00";
-           raham.append(p10,span6);
-           var pizza = document.createElement("div");
-           pizza.setAttribute("id","pizza");
-           var p11 = document.createElement("h3");
-           p11.innerText = "To Pay"
-           var p12 = document.createElement("h3");
-           p12.innerText = "₹"
-           var span7 = document.createElement("span");
-           span7.innerText =Tprice;
-           p12.append(span7)
-           pizza.append(p11,p12);
-           rupesh.append(tea,coffee,raham,pizza)
-           document.querySelector("#ocp").append(rupesh);
+            td2.append(span2, span3);
+            card4.append(td2);
+            card2.append(name, card3, card4);
+            box.append(card1, card2)
+            document.querySelector("#ocp").append(box);
 
-        }
-     
+
+        })
+        var rupesh = document.createElement("div");
+        rupesh.setAttribute("id", "rupesh");
+        var tea = document.createElement("div");
+        tea.setAttribute("id", "tea");
+        var h4 = document.createElement("h4");
+        h4.innerText = "Subtotal"
+        var p8 = document.createElement("p");
+        p8.innerText = "₹"
+        var span4 = document.createElement("span");
+        span4.innerText = Tprice;
+        p8.append(span4);
+        tea.append(h4, p8);
+        var coffee = document.createElement("div");
+        coffee.setAttribute("id", "coffee");
+        var p9 = document.createElement("p");
+        p9.innerText = "Coupon Discount"
+        var span5 = document.createElement("span");
+        span5.innerText = "₹0.00";
+        coffee.append(p9, span5);
+        var raham = document.createElement("div");
+        raham.setAttribute("id", "raham");
+        var p10 = document.createElement("p");
+        p10.innerText = "Prepaid Discount"
+        var span6 = document.createElement("span");
+        span6.innerText = "₹0.00";
+        raham.append(p10, span6);
+        var pizza = document.createElement("div");
+        pizza.setAttribute("id", "pizza");
+        var p11 = document.createElement("h3");
+        p11.innerText = "To Pay"
+        var p12 = document.createElement("h3");
+        p12.innerText = "₹"
+        var span7 = document.createElement("span");
+        span7.innerText = Tprice;
+        p12.append(span7)
+        pizza.append(p11, p12);
+        rupesh.append(tea, coffee, raham, pizza)
+        document.querySelector("#ocp").append(rupesh);
+
+    }
+
 
 
 
