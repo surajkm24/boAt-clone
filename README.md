@@ -58,7 +58,7 @@
      <li>Email:surajkm336796@gmail.com</li>
      <li>LinkedIn:https://www.linkedin.com/in/suraj-kumar-mishra-459b30215/</li></ul>
   
-     <h4> Shubham Tyagi </h4>
+ <h4>Shubham Tyagi</h4>
    <ul><li>Github: Shubhamtyagi12</li>
      <li>Github Link:https://github.com/Shubhamtyagi12</li>
      <li>Email:smartyshubhamtyagi8439@gmail.com</li>
