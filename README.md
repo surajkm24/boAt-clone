@@ -46,7 +46,7 @@
     <hr>
   <h2>Team Members and Contributors</h2>
   
-  <p>Ayesha Khan</p>
+  <h4>Ayesha Khan</h4>
     <ul><li>Github:AyeshaKhan14</li>
       <li>Github Link:https://github.com/AyeshaKhan14</li>
       <li>Email:ayeshatravels9@gmail.com</li>
