@@ -1,8 +1,8 @@
 
 <html>
   <h1>boAt-lifestyle Website Clone</h1>
-  <h3>In the Masai School Construct week project ,We have cloned the boAt-lifestyle website https://boat-clone2.netlify.app/  . boAt is a leading audio player in the Indian market & a wearable brand
-    globally.A boAt-lifestyle Website where customers can easily get the Electronics brand like earphones,headphones, and travel charger with return policy.
+  <h3>In the Masai School Construct week project ,we have cloned the boAt-lifestyle website https://boat-clone2.netlify.app/ . boAt is a leading audio player in the Indian market & a wearable brand
+    globally.A boAt-lifestyle Website where customers can easily get the Electronics brand like earphones,headphones, and travel charger  with return policy.
     <br>  We built it in 7days with the team of 6 collaborators.</p>
    <p> Some features of our Projects-</p>
   <p> 1)A secure developers panel for Controlling Website,watching details and user's feedbacks for website.
