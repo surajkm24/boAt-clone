@@ -14,19 +14,19 @@ export const Navbar = () => {
             <Stack align='center' direction='row' spacing={4}>
                 <Tooltip label='Search'>
                     <Box>
-                        <IconButton as={AiOutlineSearch} p='8px' borderRadius='50%'
+                        <IconButton icon={<AiOutlineSearch />} p='8px' borderRadius='50%'
                             cursor='pointer' />
                     </Box>
                 </Tooltip>
                 <Tooltip label='Cart'>
                     <Box>
-                        <IconButton as={AiOutlineShoppingCart} p='8px' borderRadius='50%'
+                        <IconButton icon={<AiOutlineShoppingCart />} p='8px' borderRadius='50%'
                             cursor='pointer' />
                     </Box>
                 </Tooltip>
                 <Tooltip label='Profile'>
                     <Box>
-                        <IconButton as={AiOutlineUser} p='8px' borderRadius='50%'
+                        <IconButton icon={<AiOutlineUser />} p='8px' borderRadius='50%'
                             cursor='pointer' />
                     </Box>
                 </Tooltip>
