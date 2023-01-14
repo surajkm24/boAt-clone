@@ -15,3 +15,31 @@
   background-color: #8b919b;
   border-radius: 10px
 }
+
+.swiper-button-prev,.swiper-button-next {
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width:4vw !important;
+  cursor:pointer;
+  height:4vw !important;
+}
+.swiper-button-prev::after {
+  content: "";
+  height: 1.5vw;
+  width: 1.5vw;
+  border-left:.5vw solid #dc143c;
+  border-bottom:.5vw solid #dc143c;
+  transform:rotate(45deg);
+  margin-left:.5vw;
+}
+.swiper-button-next::after {
+  content: "";
+  height: 1.5vw;
+  width: 1.5vw;
+  margin-right:.5vw;
+  border-left:.5vw solid #dc143c;
+  border-bottom:.5vw solid #dc143c;
+  transform:rotate(225deg)
+}
