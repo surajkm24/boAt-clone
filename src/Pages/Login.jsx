@@ -2,20 +2,24 @@ import { Box, Heading, Text, IconButton, Flex, Input, VStack, Button, useToast }
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { handleLoginValidation, loginUser } from "../controllers/auth.controllers";
+import { useAuth } from "../Context/AuthContext";
 
 export const Login = () => {
     const [{ email, password }, setFormData] = useState({ email: "", password: "" })
     const toast = useToast();
+    const { auth, setAuth } = useAuth();
     const handleSubmit = (e) => {
         e.preventDefault();
         let temp = handleLoginValidation(email, password, toast);
         if (temp) {
-            loginUser(email, password, toast)
+            loginUser(email, password, toast, setAuth)
         }
     }
-
+    if (auth.isAuth) {
+        return <Navigate to='/' />
+    }
     return (
         <Box px={{ base: "10px", sm: "15px", md: "20px", lg: "30px", xl: "45px" }}>
             <Heading textAlign='center' my='15px'
@@ -26,8 +30,8 @@ export const Login = () => {
                 Please enter your e-mail and password:
             </Text>
             <Flex justify='center' my='20px' gap='10px'>
-                <IconButton as={FcGoogle} borderRadius='50%' cursor='pointer' />
-                <IconButton as={FaFacebookF} borderRadius='50%' cursor='pointer' p='5px'
+                <IconButton icon={<FcGoogle />} borderRadius='50%' cursor='pointer' />
+                <IconButton icon={<FaFacebookF />} borderRadius='50%' cursor='pointer' p='5px'
                     colorScheme='facebook' />
             </Flex>
             <form onSubmit={handleSubmit}>

@@ -30,7 +30,7 @@ export const handleLoginValidation = (email, password, toast) => {
     else return true;
 }
 
-export const loginUser = (email, password, toast) => {
+export const loginUser = (email, password, toast, setAuth) => {
     let users = JSON.parse(localStorage.getItem('sfqwyr329rirdhkweflewjorfhiw')) || []
     let user = users.find(ele => ele.email === email && ele.password === password);
     if (!user) {
@@ -51,6 +51,7 @@ export const loginUser = (email, password, toast) => {
             position: "top"
         })
         localStorage.setItem('sadudqw029e2qop;w9rq0qw0w-12928e', JSON.stringify(user))
+        setAuth({ isAuth: true, user })
     }
 }
 
@@ -105,7 +106,7 @@ export const handleSignupValidation = (fName, lName, email, password, toast) => 
     else return true;
 }
 
-export const signupUser = (fName, lName, email, password, toast) => {
+export const signupUser = (fName, lName, email, password, toast, setAuth) => {
     let users = JSON.parse(localStorage.getItem('sfqwyr329rirdhkweflewjorfhiw')) || []
     let check = users.find((ele) => ele.email === email);
     if (check) {
@@ -129,5 +130,30 @@ export const signupUser = (fName, lName, email, password, toast) => {
         localStorage.setItem('sadudqw029e2qop;w9rq0qw0w-12928e', JSON.stringify(user))
         users.push(user);
         localStorage.setItem('sfqwyr329rirdhkweflewjorfhiw', JSON.stringify(users));
+        setAuth({ isAuth: true, user })
     }
+}
+
+export const checkUser = () => {
+    let users = JSON.parse(localStorage.getItem('sfqwyr329rirdhkweflewjorfhiw')) || []
+    let user = JSON.parse(localStorage.getItem('sadudqw029e2qop;w9rq0qw0w-12928e')) || {};
+    let check = users.filter((ele) => ele.email === user.email && ele.password === user.password && ele.fName === user.fName && ele.lName === user.lName);
+    if (!check.length) {
+        return { isAuth: false, user: {} }
+    }
+    else {
+        return { isAuth: true, user }
+    }
+}
+
+export const logout = (toast, setAuth) => {
+    localStorage.removeItem('sadudqw029e2qop;w9rq0qw0w-12928e')
+    toast({
+        title: "Logged out!",
+        status: "info",
+        duration: 2000,
+        isClosable: true,
+        position: "top"
+    })
+    setAuth({ isAuth: false, user: {} })
 }

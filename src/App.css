@@ -7,10 +7,8 @@
   width: 10px
 }
 
-;
-
 ::-webkit-scrollbar-track {
-  background: rgb(244, 238, 238)
+  background: rgb(51, 50, 50)
 }
 
 ::-webkit-scrollbar-thumb {

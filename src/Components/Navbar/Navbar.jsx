@@ -1,6 +1,7 @@
 import { Box, Button, Icon, IconButton, Image, Stack, Tooltip } from "@chakra-ui/react"
 import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import logo from '../../assets/boat-logo.avif';
+import { ProfilePopover } from "./ProfilePopover";
 
 export const Navbar = () => {
     return (
@@ -24,12 +25,7 @@ export const Navbar = () => {
                             cursor='pointer' />
                     </Box>
                 </Tooltip>
-                <Tooltip label='Profile'>
-                    <Box>
-                        <IconButton icon={<AiOutlineUser />} p='8px' borderRadius='50%'
-                            cursor='pointer' />
-                    </Box>
-                </Tooltip>
+                <ProfilePopover />
             </Stack>
         </Stack>
     )

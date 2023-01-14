@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <Box>
+    <Box w='100%' overflowX='hidden'>
       <Navbar />
       <AllRoutes />
       <Footer />
