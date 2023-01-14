@@ -35,7 +35,7 @@ export const loginUser = (email, password, toast, setAuth) => {
     let user = users.find(ele => ele.email === email && ele.password === password);
     if (!user) {
         toast({
-            title: "User doesn't exists.",
+            title: "Wrong email or password.",
             duration: 2000,
             isClosable: true,
             status: "error",
@@ -156,4 +156,53 @@ export const logout = (toast, setAuth) => {
         position: "top"
     })
     setAuth({ isAuth: false, user: {} })
+}
+
+export const verifyEmail = (email, toast) => {
+    let users = JSON.parse(localStorage.getItem('sfqwyr329rirdhkweflewjorfhiw')) || []
+    let check = users.find((ele) => ele.email === email);
+    if (!check) {
+        toast({
+            title: "No account found with this email.",
+            duration: 2000,
+            isClosable: true,
+            status: "error",
+            position: "top"
+        })
+    }
+    else return true;
+}
+
+export const changePassword = (email, password, toast) => {
+    let users = JSON.parse(localStorage.getItem('sfqwyr329rirdhkweflewjorfhiw')) || []
+    if (password.length < 8) {
+        toast({
+            title: "Weak password.",
+            description: "It must have at least 8 characters.",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+            position: "top"
+        })
+    }
+    else {
+        users = users.map((ele) => {
+            if (ele.email === email) {
+                return {
+                    ...ele,
+                    password
+                }
+            }
+            else return ele;
+        })
+        localStorage.setItem('sfqwyr329rirdhkweflewjorfhiw', JSON.stringify(users));
+        toast({
+            title: "Password updated!",
+            status: "info",
+            duration: 2000,
+            isClosable: true,
+            position: "top"
+        })
+        return true;
+    }
 }

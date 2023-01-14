@@ -2,6 +2,7 @@ import { Box, Button, Icon, IconButton, Image, Stack, Tooltip } from "@chakra-ui
 import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import logo from '../../assets/boat-logo.avif';
 import { ProfilePopover } from "./ProfilePopover";
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
     return (
@@ -9,7 +10,7 @@ export const Navbar = () => {
             px={{ base: "10px", sm: "15px", md: "20px", lg: "30px", xl: "45px" }}
             py={{ base: "5px", md: "10px" }} direction='row' align='center'
             justify='space-between'>
-            <Box w='70px' cursor='pointer'>
+            <Box w='70px' cursor='pointer' as={Link} to='/'>
                 <Image src={logo} width='100%' />
             </Box>
             <Stack align='center' direction='row' spacing={4}>
