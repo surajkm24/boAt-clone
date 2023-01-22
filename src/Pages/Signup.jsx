@@ -13,7 +13,6 @@ export const Signup = () => {
     })
     const toast = useToast();
     const { auth,setAuth } = useAuth();
-    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         let temp = handleSignupValidation(fName, lName, email, password, toast);

@@ -15,7 +15,7 @@ export const Email = ({ email, setData, setEmailVerified }) => {
             <VStack spacing={'20px'} w={{ base: "90%", sm: "400px" }} mx='auto'
                 mt={{ base: "30px", md: "45px", xl: "60px" }}>
                 <Input placeholder='Email Address' value={email} required
-                    onChange={(e) => setData(prev => { return { ...prev, email: e.target.value.trim() } })} />
+                    onChange={(e) => setData(prev => { return { ...prev, email: e.target.value.trim() } })} type='email' />
                 <Button w='100%' colorScheme='red' type='submit' >
                     RECOVER
                 </Button>
